@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="navigation" class="navbar active">
+        <ul>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Search</a>
+        </ul>
+    </div>
+
+    <script>
+        const div = document.getElementById('navigation');
+        console.log(div.className);
+        console.log(div.classList);
+        div.classList.add('single');
+        div.classList.add('multiple', 'multiple_2');
+
+        let arr = div.classList;
+        console.log(arr)
+
+        for ( let i = 0; i < arr.length; i++ ) {
+            if ( arr[i] == 'single' ) {
+                console.log(`The item has the class named: 'single' ( location: ${i} )`)
+            } 
+        }
+
+        div.classList.remove('single');
+        div.classList.remove('multiple', 'multiple_2');
+
+        console.log(div.classList);
+
+    </script>
+</body>
+</html>
